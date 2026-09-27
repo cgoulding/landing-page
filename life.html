@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A small personal page for Connor Goulding covering family, running, triathlons, GAA, and life outside work."
+    />
+    <title>Connor Goulding | Life</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="./images/favicon/site.webmanifest">
+    <meta name="theme-color" content="#06233A">
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="Connor Goulding home">
+          <img class="brand-mark" src="./images/logoSolid.png" alt="Connor Goulding logo" />
+          <span class="brand-copy">
+            <strong>Connor Goulding</strong>
+            <span>Product · Technology · Value</span>
+          </span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <a href="./index.html">Home</a>
+          <a href="./experience.html">Experience</a>
+          <a href="./life.html">Life</a>
+          <a href="./index.html#thinking">Thinking</a>
+          <a href="./index.html#contact">Contact</a>
+          <a class="nav-cta" href="mailto:connor.goulding@gmail.com">Get in touch</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="container page-grid two-col">
+          <div>
+            <p class="page-kicker">Life</p>
+            <h1>Grounded, social, and not defined only by work.</h1>
+            <p class="page-intro">
+              This page is a small seed for the personal side of the site. The tone stays understated, but it can
+              help show that the professional profile sits alongside family life, sport, and ordinary day-to-day
+              interests.
+            </p>
+          </div>
+
+          <aside class="detail-card">
+            <h2>Why it exists</h2>
+            <p>
+              To add a little more shape and warmth without turning the site into a lifestyle page. A few good photos
+              should be enough here.
+            </p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="value-band">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow eyebrow-dark">Outside work</p>
+            <h2>Simple things that say a lot about how I live.</h2>
+          </div>
+
+          <div class="value-grid">
+            <article class="value-card">
+              <div class="value-icon">◌</div>
+              <h3>Family</h3>
+              <p>Keep the family front and centre. It is the main reference point outside work.</p>
+            </article>
+            <article class="value-card">
+              <div class="value-icon">↗</div>
+              <h3>Running and triathlons</h3>
+              <p>Recently more running, with triathlon as part of the wider picture of keeping fit and having a target to train toward.</p>
+            </article>
+            <article class="value-card">
+              <div class="value-icon">◎</div>
+              <h3>GAA</h3>
+              <p>Earlier sporting years shaped by GAA and the kind of team environment that comes with it.</p>
+            </article>
+            <article class="value-card">
+              <div class="value-icon">⬡</div>
+              <h3>DIY and ordinary life</h3>
+              <p>Practical, hands-on interests that keep things balanced and prevent the profile from feeling too polished.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="story-band">
+        <div class="container page-grid two-col">
+          <div class="detail-card">
+            <p class="eyebrow">Tone</p>
+            <h2>Professional, technical, and approachable.</h2>
+            <p>
+              The aim is to signal that I can work at a serious level without presenting as distant or overly
+              corporate. The personal page can help balance the work profile with a more natural human context.
+            </p>
+          </div>
+
+          <div class="detail-card">
+            <p class="eyebrow">Planned additions</p>
+            <ul class="list-tight">
+              <li>A few candid photos from everyday life.</li>
+              <li>One or two lines about family and home life.</li>
+              <li>Small references to sport, training, and time outdoors.</li>
+              <li>Nothing that competes with the professional page.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-band">
+        <div class="container contact-inner">
+          <div>
+            <p class="eyebrow">Back</p>
+            <h2>Return to the professional summary or browse the experience page.</h2>
+          </div>
+          <a class="button button-primary button-dark" href="./index.html">Home</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <img src="./images/logoSolid.png" alt="" aria-hidden="true" />
+          <div>
+            <strong>Connor Goulding</strong>
+            <span>Product · Technology · Value</span>
+          </div>
+        </div>
+        <p><a class="text-link" href="./experience.html">Experience page</a></p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector(".nav-toggle");
+      const nav = document.querySelector(".site-nav");
+
+      toggle.addEventListener("click", () => {
+        const open = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!open));
+        nav.dataset.open = String(!open);
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          toggle.setAttribute("aria-expanded", "false");
+          nav.dataset.open = "false";
+        });
+      });
+    </script>
+  </body>
+</html>
